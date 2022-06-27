@@ -14,6 +14,9 @@ class Categories extends React.Component {
 
         }
     }
+changeCategory=(category)=>{
+    this.state({currentCategory: category.categoryName});
+};
 
 
     render() {
