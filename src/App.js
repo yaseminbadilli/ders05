@@ -3,7 +3,6 @@ import ReactDOM  from "react";
 import { Container, Row, Col } from 'reactstrap';
 import Header from './Header.js';
 import Categories from "./Categories.js";
-import Product from "./Product.js";
 
 
 class App extends ReactDOM.Component {
@@ -17,9 +16,7 @@ class App extends ReactDOM.Component {
                     <Row>
                         <Col><Categories></Categories></Col>
                     </Row>
-                    <Row>
-                        <Col><Product></Product></Col>
-                    </Row>
+                   
                 </Container>
 
 
