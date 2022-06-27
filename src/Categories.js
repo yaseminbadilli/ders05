@@ -10,13 +10,13 @@ class Categories extends React.Component {
                 { categoryId: "1", categoryName: "kovalar" },
                 { categoryId: "2", categoryName: "sos" },
             ],
-            currentCategory: "kovalar"
+            currentCategory: ""
 
         }
     }
-changeCategory=(category)=>{
-    this.state({currentCategory: category.categoryName});
-};
+    changeCategory  (category) {
+        this.setState({ currentCategory: category.categoryName });
+    };
 
 
     render() {
@@ -26,7 +26,7 @@ changeCategory=(category)=>{
 
 
                 {this.state.categories.map((category) => (
-                    <ListGroupItem  onKeyDown={() => this.setState({ currentCategory: category.categoryName })} key={category.categoryId}>
+                    <ListGroupItem onClick={() => this.changeCategory(category)} key={category.categoryId}>
                         {category.categoryName}
 
                     </ListGroupItem>
