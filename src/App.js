@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactDOM  from "react";
+import { Container, Row, Col } from 'reactstrap';
+import Header from './Header.js';
+import Categories from "./Categories.js";
+import Product from "./Product.js";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+class App extends ReactDOM.Component {
+    render() {
+
+        let infoCategories = { title: "ÜRÜNLER" }
+        return (
+            <div>
+                <Container>
+                    <Row><Header favcol ="yellow"></Header></Row>
+                    <Row>
+                        <Col><Categories></Categories></Col>
+                    </Row>
+                    <Row>
+                        <Col><Product></Product></Col>
+                    </Row>
+                </Container>
+
+
+            </div>
+        )
+    }
+}export default App;
